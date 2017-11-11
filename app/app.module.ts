@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './notfound.component';
 import { GitHubComponent } from './github.component';
+import { AboutMeComponent } from './aboutme.component';
 import { routing } from './app.routing';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { routing } from './app.routing';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    GitHubComponent
+    GitHubComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

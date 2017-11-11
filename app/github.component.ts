@@ -23,7 +23,7 @@ import { FormControl } from '@angular/forms';
     }
   `],
   template: `
-    <input class="form-control" type="search" [formControl]="searchControl">
+    <input class="form-control" type="search" [formControl]="searchControl" placeholder="Enter a username to search">
     <div *ngIf="isLoading">
       <i class="fa fa-spinner fa-spin fa-3x"></i>
     </div>

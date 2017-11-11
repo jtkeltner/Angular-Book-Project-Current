@@ -29,6 +29,7 @@ import { FormControl } from '@angular/forms';
     </div>
     <div *ngFor="let user of users" class="media">
       <div class="media-left">
+      	<a [routerLink]="['user',user.login,user.score]">
         <a href="{{ user.html_url }}">
           <img class="media-object img" src="{{ user.avatar_url }}" alt="...">
         </a>

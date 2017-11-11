@@ -30,7 +30,6 @@ import { FormControl } from '@angular/forms';
     <div *ngFor="let user of users" class="media">
       <div class="media-left">
       	<a [routerLink]="['user',user.login,user.score]">
-        <a href="{{ user.html_url }}">
           <img class="media-object img" src="{{ user.avatar_url }}" alt="...">
         </a>
         </div>
@@ -38,8 +37,7 @@ import { FormControl } from '@angular/forms';
           <h4 class="media-heading">{{ user.login }}</h4>
           Score: {{ user.score }}
         </div>
-      </div>
-    `,
+      </div>`,
   providers: [GitHubService]
 })
 

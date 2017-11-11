@@ -3,18 +3,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { HomeComponent } from './home.component';
+import { NotFoundComponent } from './notfound.component';
+import { GitHubComponent } from './github.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NotFoundComponent,
+    GitHubComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
     HttpModule,
+    ReactiveFormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

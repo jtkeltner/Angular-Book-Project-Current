@@ -15,6 +15,10 @@ import { routing } from './app.routing';
 import { AboutMeComponent } from './aboutme.component';
 
 import { GitHubUserComponent } from './githubuser.component';
+import { LoginService } from './login.service';
+import { AuthGuard } from './auth-guard.service';
+import { LoginComponent } from './login.component';
+import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { GitHubUserComponent } from './githubuser.component';
     NotFoundComponent,
     AboutMeComponent,
     GitHubComponent,
-    GitHubUserComponent
+    GitHubUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,11 @@ import { GitHubUserComponent } from './githubuser.component';
     ReactiveFormsModule,
     routing
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    LoginService,
+    PreventUnsavedChangesGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

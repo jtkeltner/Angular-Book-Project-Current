@@ -7,12 +7,11 @@ import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './notfound.component';
 import { AboutMeComponent } from './aboutme.component';
 
-import { routing } from './app.routing';
-import { AuthGuard } from './auth-guard.service';
-import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.service';
-
 import { GitHubModule } from './github/github.module';
 import { LoginModule } from './login/login.module';
+
+import { routing } from './app.routing';
+import { GitHubRouting } from './github/github.routing';
 
 @NgModule({
   declarations: [
@@ -20,14 +19,12 @@ import { LoginModule } from './login/login.module';
     HomeComponent,
     NotFoundComponent,
     AboutMeComponent,
-    GitHubComponent,
-    GitHubUserComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
     LoginModule,
     GitHubModule,
+    GitHubRouting,
     routing
   ],
   providers: [

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { GitHubService } from './github.service';
 
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';

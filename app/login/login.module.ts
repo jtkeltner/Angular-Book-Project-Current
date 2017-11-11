@@ -5,13 +5,12 @@ import { RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login.component';
 import { LoginService } from './login.service';
-import { PreventUnsavedChangesGuard } from './prevent-unsaved-chages-guard.service';
+import { PreventUnsavedChangesGuard } from '../prevent-unsaved-changes-guard.service';
 import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
 	imports: [
 		CommonModule,
-		FormsModule,
 		ReactiveFormsModule
 	],
 	declarations: [

@@ -42,8 +42,8 @@ import { FormControl } from '@angular/forms';
 })
 
 export class AppComponent {
-  isLoading = true;
-
+  searchControl = new FormControl();
+  isLoading = false;
   users = [];
 
  // searchControl = new FormControl();
@@ -62,11 +62,17 @@ export class AppComponent {
   }
 
   ngOnInit() {
-   this._githubService.getGitHubData('greg')
-     .subscribe(data => {
-        this.isLoading = false;
-        this.users = data.items;
-        //console.log(data.items);
+    this.searchControl.valueChanges
+      .filter(text => text.length >= 3)
+      .debounceTime(400)
+      .distinctUntilChanged()
+      .subscribe(value => {
+        this.isLoading = true;
+        this._githubService.getGitHubData(value)
+         .subscribe(data => {
+          this.isLoading = false;
+          this.users = data.items;
+        });
       });
   }
 }

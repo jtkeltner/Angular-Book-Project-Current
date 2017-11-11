@@ -5,7 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 	selector: 'user',
 	template: `
 		<h1>User Login: {{ login }}</h1>
-		<h2>User Score: {{ score }}</h2>`
+		<h2>User Score: {{ score }}</h2>
+	`
 })
 
 export class GitHubUserComponent implements OnInit, OnDestroy {
